@@ -1,0 +1,138 @@
+body {
+    background-color: rgb(31, 22, 31);
+    font-family: 'Courier New', Courier, monospace;    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    color: rgb(200, 145, 200);
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "top"
+        "middle"
+        "bottom";
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+}
+
+.top-menu {
+    grid-area: top;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: rgb(68, 40, 68);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.menu-center {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.menu-button {
+    padding: 10px;
+    background-color: rgb(31, 22, 31);
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border-radius: 8px;
+}
+
+.menu-button:hover {
+    background-color: rgb(142, 90, 142);
+}
+
+.middle-content {
+    grid-area: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(100vh - 100px);
+}
+
+.small-header {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(151, 102, 151);
+    margin-bottom: 10px;
+}
+
+
+.small-text {
+    font-size: 14px;
+    color: rgb(151, 102, 151);
+}
+
+
+.main-paragraph {
+    margin-top: 10px;
+    margin-left: 350px;
+    margin-right: 350px;
+    font-size: 16px;
+    color: rgb(246, 221, 246);
+}
+
+.bullet-list {
+    list-style-type: disc;
+    margin-left: 350px;
+    margin-right: 350px;
+    padding-left: 100px;
+    text-align: left;
+    color: rgb(246, 221, 246);
+}
+
+.bullet-list li {
+    font-size: 16px;
+}
+
+.bullet-list strong {
+    font-weight: bold;
+    color: rgb(200, 145, 200);
+}
+
+.bottom-navigation {
+    grid-area: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    border-top: 1px solid #ddd;
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+}
+
+.prev-button, .next-button {
+    padding: 10px 20px;
+    background-color: rgb(142, 90, 142);
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.5s;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgb(68, 40, 68);
+}
